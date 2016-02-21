@@ -16,11 +16,11 @@
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
 					});
 					$("#prev-btn").click(function(){
-						n--;
+						n - 1;
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
 					});
 					$("#next-btn").click(function(){
-						n++;
+						n + 1;
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
 					});
 				}(i));
