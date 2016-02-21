@@ -32,8 +32,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .display {
 	padding: 10px;
-	height: 520px;
-	width: 520px;
+	height: 600px;
+	width: 800px;
+}
+
+#prev-btn {
+	height: 50px;
+	width: 50px;
+	background-color: #f00;
+	position: relative;
+	float: left;
+	top: 240px;
+}
+
+#next-btn {
+	height: 50px;
+	width: 50px;
+	background-color: #f00;
+	position: relative;
+	float: right;
+	top: 240px;
 }
 
 img#picture {
@@ -43,6 +61,10 @@ img#picture {
 
 .calendar {
 
+}
+
+li#months {
+	cursor: pointer;
 }
 
 table.calendar {
