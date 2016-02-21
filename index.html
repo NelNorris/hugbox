@@ -14,14 +14,17 @@
 				(function (n) {
 					$("#doodle" + n).click(function(){
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-					});
-					$("#prev-btn").click(function(){
-						n - 1;
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-					});
-					$("#next-btn").click(function(){
-						n + 1;
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						$("#next-btn").click(function(){
+							n++;
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						});
+						$("#prev-btn").click(function(){
+							n--;
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						});
+						$("#doodle" + n).click(function(){
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						});
 					});
 				}(i));
 			}
