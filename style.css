@@ -18,8 +18,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .carousel {
-	max-width: 900px;
+	max-width: 600px;
 	margin: 0 auto;
+	height: 750px;
+}
+
+.carousel-indicators {
+	bottom: 10px;
+}
+
+.carousel-control {
+	width: 0px;
+}
+
+.carousel-inner {
+	border: 3px solid #ffc;
+	border-radius: 10px;
+	background-color: #d3e4f8;
+	height: 750px;
 }
 
 .panel {
@@ -43,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: left;
 	top: 120px;
 	cursor: pointer;
+	font-size: 20px;
 }
 
 #next-btn {
@@ -52,6 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 	float: right;
 	top: 120px;
 	cursor: pointer;
+	font-size: 20px;
 }
 
 .glyphicon-chevron-right {
@@ -65,7 +83,9 @@ img#picture {
 }
 
 .calendar {
-
+	background-color: #e9f2fc;
+	max-width: 600px;
+	border: 2px solid #ffe;
 }
 
 ul.pagination li {
