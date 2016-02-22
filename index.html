@@ -10,10 +10,29 @@
 	<link rel="stylesheet" href="style.css">	
 	<script>
 		$(document).ready(function(){
-			for (var i = 0; i < 365; i++){
+			for (var i = 0; i <= 365; i++){
 				(function (n) {
 					$("#doodle" + n).click(function(){
-						$("#picture").attr("src", "https://nelnorris.files.wordpress.com/2016/01/doodle" + n + ".jpg");
+						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						$("#next-btn").click(function(){
+							n++;
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+							if (n == 366) {
+								n = 1;
+								$("#picture").attr("src", "img/doodle" + n + ".jpg");
+							}
+						});
+						$("#prev-btn").click(function(){
+							n--;
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+							if (n == 0) {
+								n = 365;
+								$("#picture").attr("src", "img/doodle" + n + ".jpg");
+							}
+						});
+						$("#doodle" + n).click(function(){
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						});
 					});
 				}(i));
 			}
@@ -31,9 +50,13 @@
 		</div>
 		<div class="container">
 			<div class="row">
+				
 				<div class="panel display" style="margin: 0 auto 20px;">
-					<img id="picture" alt="Please select a date" src="#" style="max-width: 500px; max-height: 500px;">
+					<div id="prev-btn" class="glyphicon glyphicon-chevron-left"></div>
+					<img id="picture" alt="Please select a date" src="#" style="max-width: 300px; max-height: 300px;">
+					<div id="next-btn" class="glyphicon glyphicon-chevron-right"></div>
 				</div>
+
 				<!-- image display -->
 			</div>
 		</div>
@@ -64,135 +87,135 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail1.png" alt="January 1st" id="doodle1">
+											<img src="img/thumbnail1.png" alt="January 1st" id="doodle1">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail2.png" alt="January 2nd" id="doodle2">
+											<img src="img/thumbnail2.png" alt="January 2nd" id="doodle2">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail3.jpg" alt="January 3rd" id="doodle3">
+											<img src="img/thumbnail3.jpg" alt="January 3rd" id="doodle3">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail4.jpg" alt="January 4th" id="doodle4">
+											<img src="img/thumbnail4.jpg" alt="January 4th" id="doodle4">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail5.jpg" alt="January 5th" id="doodle5">
+											<img src="img/thumbnail5.jpg" alt="January 5th" id="doodle5">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail6.jpg" alt="January 6th" id="doodle6">
+											<img src="img/thumbnail6.jpg" alt="January 6th" id="doodle6">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail7.jpg" alt="January 7th" id="doodle7">
+											<img src="img/thumbnail7.jpg" alt="January 7th" id="doodle7">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail8.jpg" alt="January 8th" id="doodle8">
+											<img src="img/thumbnail8.jpg" alt="January 8th" id="doodle8">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail9.jpg" alt="January 9th" id="doodle9">
+											<img src="img/thumbnail9.jpg" alt="January 9th" id="doodle9">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail10.jpg" alt="January 10th" id="doodle10">
+											<img src="img/thumbnail10.jpg" alt="January 10th" id="doodle10">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail11.jpg" alt="January 11th" id="doodle11">
+											<img src="img/thumbnail11.jpg" alt="January 11th" id="doodle11">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail12.jpg" alt="January 12th" id="doodle12">
+											<img src="img/thumbnail12.jpg" alt="January 12th" id="doodle12">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail13.jpg" alt="January 13th" id="doodle13">
+											<img src="img/thumbnail13.jpg" alt="January 13th" id="doodle13">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail14.jpg" alt="January 14th" id="doodle14">
+											<img src="img/thumbnail14.jpg" alt="January 14th" id="doodle14">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail15.jpg" alt="January 15th" id="doodle15">
+											<img src="img/thumbnail15.jpg" alt="January 15th" id="doodle15">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail16.jpg" alt="January 16th" id="doodle16">
+											<img src="img/thumbnail16.jpg" alt="January 16th" id="doodle16">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail17.jpg" alt="January 17th" id="doodle17">
+											<img src="img/thumbnail17.jpg" alt="January 17th" id="doodle17">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail18.jpg" alt="January 18th" id="doodle18">
+											<img src="img/thumbnail18.jpg" alt="January 18th" id="doodle18">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail19.jpg" alt="January 19th" id="doodle19">
+											<img src="img/thumbnail19.jpg" alt="January 19th" id="doodle19">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail20.jpg" alt="January 20th" id="doodle20">
+											<img src="img/thumbnail20.jpg" alt="January 20th" id="doodle20">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail21.jpg" alt="January 21st" id="doodle21">
+											<img src="img/thumbnail21.jpg" alt="January 21st" id="doodle21">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail22.jpg" alt="January 22nd" id="doodle22">
+											<img src="img/thumbnail22.jpg" alt="January 22nd" id="doodle22">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail23.jpg" alt="January 23rd" id="doodle23">
+											<img src="img/thumbnail23.jpg" alt="January 23rd" id="doodle23">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail24.jpg" alt="January 24th" id="doodle24">
+											<img src="img/thumbnail24.jpg" alt="January 24th" id="doodle24">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail25.jpg" alt="January 25th" id="doodle25">
+											<img src="img/thumbnail25.jpg" alt="January 25th" id="doodle25">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail26.jpg" alt="January 26th" id="doodle26">
+											<img src="img/thumbnail26.jpg" alt="January 26th" id="doodle26">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail27.jpg" alt="January 27th" id="doodle27">
+											<img src="img/thumbnail27.jpg" alt="January 27th" id="doodle27">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail28.jpg" alt="January 28th" id="doodle28">
+											<img src="img/thumbnail28.jpg" alt="January 28th" id="doodle28">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail29.jpg" alt="January 29th" id="doodle29">
+											<img src="img/thumbnail29.jpg" alt="January 29th" id="doodle29">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail30.jpg" alt="January 30th" id="doodle30">
+											<img src="img/thumbnail30.jpg" alt="January 30th" id="doodle30">
 										</td>
 										<td>
 											<p>31</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail31.jpg" alt="January 31st" id="doodle31">
+											<img src="img/thumbnail31.jpg" alt="January 31st" id="doodle31">
 										</td>
 										<td></td>
 										<td></td>
@@ -212,123 +235,123 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail32.jpg" alt="February 1st" id="doodle32">
+											<img src="img/thumbnail32.jpg" alt="February 1st" id="doodle32">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail33.jpg" alt="February 2nd" id="doodle33">
+											<img src="img/thumbnail33.jpg" alt="February 2nd" id="doodle33">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail34.jpg" alt="February 3rd" id="doodle34">
+											<img src="img/thumbnail34.jpg" alt="February 3rd" id="doodle34">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail35.jpg" alt="February 4th" id="doodle35">
+											<img src="img/thumbnail35.jpg" alt="February 4th" id="doodle35">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail36.jpg" alt="February 5th" id="doodle36">
+											<img src="img/thumbnail36.jpg" alt="February 5th" id="doodle36">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail37.jpg" alt="February 6th" id="doodle37">
+											<img src="img/thumbnail37.jpg" alt="February 6th" id="doodle37">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail38.jpg" alt="February 7th" id="doodle38">
+											<img src="img/thumbnail38.jpg" alt="February 7th" id="doodle38">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail39.jpg" alt="February 8th" id="doodle39">
+											<img src="img/thumbnail39.jpg" alt="February 8th" id="doodle39">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail40.jpg" alt="February 9th" id="doodle40">
+											<img src="img/thumbnail40.jpg" alt="February 9th" id="doodle40">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail41.jpg" alt="February 10th" id="doodle41">
+											<img src="img/thumbnail41.jpg" alt="February 10th" id="doodle41">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail42.jpg" alt="February 11th" id="doodle42">
+											<img src="img/thumbnail42.jpg" alt="February 11th" id="doodle42">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail43.jpg" alt="February 12th" id="doodle43">
+											<img src="img/thumbnail43.jpg" alt="February 12th" id="doodle43">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail44.jpg" alt="February 13th" id="doodle44">
+											<img src="img/thumbnail44.jpg" alt="February 13th" id="doodle44">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail45.jpg" alt="February 14th" id="doodle45">
+											<img src="img/thumbnail45.jpg" alt="February 14th" id="doodle45">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail46.jpg" alt="February 15th" id="doodle46">
+											<img src="img/thumbnail46.jpg" alt="February 15th" id="doodle46">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail47.jpg" alt="February 16th" id="doodle47">
+											<img src="img/thumbnail47.jpg" alt="February 16th" id="doodle47">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail48.jpg" alt="February 17th" id="doodle48">
+											<img src="img/thumbnail48.jpg" alt="February 17th" id="doodle48">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail49.jpg" alt="February 18th" id="doodle49">
+											<img src="img/thumbnail49.jpg" alt="February 18th" id="doodle49">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail50.jpg" alt="February 19th" id="doodle50">
+											<img src="img/thumbnail50.jpg" alt="February 19th" id="doodle50">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail51.jpg" alt="February 20th" id="doodle51">
+											<img src="img/thumbnail51.jpg" alt="February 20th" id="doodle51">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail52.jpg" alt="February 21st" id="doodle52">
+											<img src="img/thumbnail52.jpg" alt="February 21st" id="doodle52">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail53.jpg" alt="February 22nd" id="doodle53">
+											<img src="img/thumbnail53.jpg" alt="February 22nd" id="doodle53">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail54.jpg" alt="February 23rd" doodle="doodle54"
+											<img src="img/thumbnail54.jpg" alt="February 23rd" doodle="doodle54"
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail55.jpg" alt="February 24th" id="doodle55">
+											<img src="img/thumbnail55.jpg" alt="February 24th" id="doodle55">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail56.jpg" alt="February 25th" id="doodle56">
+											<img src="img/thumbnail56.jpg" alt="February 25th" id="doodle56">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail57.jpg" alt="February 26th" id="doodle57">
+											<img src="img/thumbnail57.jpg" alt="February 26th" id="doodle57">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail58.jpg" alt="February 27th" id="doodle58">
+											<img src="img/thumbnail58.jpg" alt="February 27th" id="doodle58">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail59.jpg" alt="February 28th" id="doodle59">
+											<img src="img/thumbnail59.jpg" alt="February 28th" id="doodle59">
 										</td>
 										<td></td>
 										<td></td>
@@ -348,137 +371,137 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail60.jpg" alt="March 1st" id="doodle60">
+											<img src="img/thumbnail60.jpg" alt="March 1st" id="doodle60">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail61.jpg" alt="March 2nd" id="doodle61">
+											<img src="img/thumbnail61.jpg" alt="March 2nd" id="doodle61">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail62.jpg" alt="March 3rd" id="doodle62">
+											<img src="img/thumbnail62.jpg" alt="March 3rd" id="doodle62">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail63.jpg" alt="March 4th" id="doodle63">
+											<img src="img/thumbnail63.jpg" alt="March 4th" id="doodle63">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail64.jpg" alt="March 5th" id="doodle64">
+											<img src="img/thumbnail64.jpg" alt="March 5th" id="doodle64">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail65.jpg" alt="March 6th" id="doodle65">
+											<img src="img/thumbnail65.jpg" alt="March 6th" id="doodle65">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail66.jpg" alt="March 7th" id="doodle66">
+											<img src="img/thumbnail66.jpg" alt="March 7th" id="doodle66">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail67.jpg" alt="March 8th" id="doodle67">
+											<img src="img/thumbnail67.jpg" alt="March 8th" id="doodle67">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail68.jpg" alt="March 9th" id="doodle68">
+											<img src="img/thumbnail68.jpg" alt="March 9th" id="doodle68">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail69.jpg" alt="March 10th" id="doodle69">
+											<img src="img/thumbnail69.jpg" alt="March 10th" id="doodle69">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail70.jpg" alt="March 11th" id="doodle70">
+											<img src="img/thumbnail70.jpg" alt="March 11th" id="doodle70">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail71.jpg" alt="March 12th" id="doodle71">
+											<img src="img/thumbnail71.jpg" alt="March 12th" id="doodle71">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail72.jpg" alt="March 13th" id="doodle72">
+											<img src="img/thumbnail72.jpg" alt="March 13th" id="doodle72">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail73.jpg" alt="March 14th" id="doodle73">
+											<img src="img/thumbnail73.jpg" alt="March 14th" id="doodle73">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail74.jpg" alt="March 15th" id="doodle74">
+											<img src="img/thumbnail74.jpg" alt="March 15th" id="doodle74">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail75.jpg" alt="March 16th" id="doodle75">
+											<img src="img/thumbnail75.jpg" alt="March 16th" id="doodle75">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail76.jpg" alt="March 17th" id="doodle76">
+											<img src="img/thumbnail76.jpg" alt="March 17th" id="doodle76">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail77.jpg" alt="March 18th" id="doodle77">
+											<img src="img/thumbnail77.jpg" alt="March 18th" id="doodle77">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail78.jpg" alt="March 19th" id="doodle78">
+											<img src="img/thumbnail78.jpg" alt="March 19th" id="doodle78">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail79.jpg" alt="March 20th" id="doodle79">
+											<img src="img/thumbnail79.jpg" alt="March 20th" id="doodle79">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail80.jpg" alt="March 21st" id="doodle80">
+											<img src="img/thumbnail80.jpg" alt="March 21st" id="doodle80">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail81.jpg" alt="March 22nd" id="doodle81">
+											<img src="img/thumbnail81.jpg" alt="March 22nd" id="doodle81">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail82.jpg" alt="March 23rd" id="doodle82">
+											<img src="img/thumbnail82.jpg" alt="March 23rd" id="doodle82">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail83.jpg" alt="March 24th" id="doodle83">
+											<img src="img/thumbnail83.jpg" alt="March 24th" id="doodle83">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail84.jpg" alt="March 25th" id="doodle84">
+											<img src="img/thumbnail84.jpg" alt="March 25th" id="doodle84">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail85.jpg" alt="March 26th" id="doodle85">
+											<img src="img/thumbnail85.jpg" alt="March 26th" id="doodle85">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail86.jpg" alt="March 27th" id="doodle86">
+											<img src="img/thumbnail86.jpg" alt="March 27th" id="doodle86">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail87.jpg" alt="March 28th" id="doodle87">
+											<img src="img/thumbnail87.jpg" alt="March 28th" id="doodle87">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail88.jpg" alt="March 29th" id="doodle88">
+											<img src="img/thumbnail88.jpg" alt="March 29th" id="doodle88">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail89.jpg" alt="March 30th" id="doodle89">
+											<img src="img/thumbnail89.jpg" alt="March 30th" id="doodle89">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>31</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail90.jpg" alt="March 31st" id="doodle90">
+											<img src="img/thumbnail90.jpg" alt="March 31st" id="doodle90">
 										</td>
 										<td></td>
 										<td></td>
@@ -498,131 +521,131 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail91.jpg" alt="April 1st" id="doodle91">
+											<img src="img/thumbnail91.jpg" alt="April 1st" id="doodle91">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail92.jpg" alt="April 2nd" id="doodle92">
+											<img src="img/thumbnail92.jpg" alt="April 2nd" id="doodle92">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail93.jpg" alt="April 3rd" id="doodle93">
+											<img src="img/thumbnail93.jpg" alt="April 3rd" id="doodle93">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail94.jpg" alt="April 4th" id="doodle94">
+											<img src="img/thumbnail94.jpg" alt="April 4th" id="doodle94">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail95.jpg" alt="April 5th" id="doodle95">
+											<img src="img/thumbnail95.jpg" alt="April 5th" id="doodle95">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail96.jpg" alt="April 6th" id="doodle96">
+											<img src="img/thumbnail96.jpg" alt="April 6th" id="doodle96">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail97.jpg" alt="April 7th" id="doodle97">
+											<img src="img/thumbnail97.jpg" alt="April 7th" id="doodle97">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail98.jpg" alt="April 8th" id="doodle98">
+											<img src="img/thumbnail98.jpg" alt="April 8th" id="doodle98">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail99.jpg" alt="April 9th" id="doodle99">
+											<img src="img/thumbnail99.jpg" alt="April 9th" id="doodle99">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail100.jpg" alt="April 10th" id="doodle100">
+											<img src="img/thumbnail100.jpg" alt="April 10th" id="doodle100">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail101.jpg" alt="April 11th" id="doodle101">
+											<img src="img/thumbnail101.jpg" alt="April 11th" id="doodle101">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail102.jpg" alt="April 12th" id="doodle102">
+											<img src="img/thumbnail102.jpg" alt="April 12th" id="doodle102">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail103.jpg" alt="April 13th" id="doodle103">
+											<img src="img/thumbnail103.jpg" alt="April 13th" id="doodle103">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail104.jpg" alt="April 14th" id="doodle104">
+											<img src="img/thumbnail104.jpg" alt="April 14th" id="doodle104">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail105.jpg" alt="April 15th" id="doodle105">
+											<img src="img/thumbnail105.jpg" alt="April 15th" id="doodle105">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail106.jpg" alt="April 16th" id="doodle106">
+											<img src="img/thumbnail106.jpg" alt="April 16th" id="doodle106">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail107.jpg" alt="April 17th" id="doodle107">
+											<img src="img/thumbnail107.jpg" alt="April 17th" id="doodle107">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail108.jpg" alt="April 18th" id="doodle108">
+											<img src="img/thumbnail108.jpg" alt="April 18th" id="doodle108">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail109.jpg" alt="April 19th" id="doodle109">
+											<img src="img/thumbnail109.jpg" alt="April 19th" id="doodle109">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail110.jpg" alt="April 20th" id="doodle110">
+											<img src="img/thumbnail110.jpg" alt="April 20th" id="doodle110">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail111.jpg" alt="April 21st" id="doodle111">
+											<img src="img/thumbnail111.jpg" alt="April 21st" id="doodle111">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail112.jpg" alt="April 22nd" id="doodle112">
+											<img src="img/thumbnail112.jpg" alt="April 22nd" id="doodle112">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail113.jpg" alt="April 23rd" id="doodle113">
+											<img src="img/thumbnail113.jpg" alt="April 23rd" id="doodle113">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail114.jpg" alt="April 24th" id="doodle114">
+											<img src="img/thumbnail114.jpg" alt="April 24th" id="doodle114">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail115.jpg" alt="April 25th" id="doodle115">
+											<img src="img/thumbnail115.jpg" alt="April 25th" id="doodle115">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail116.jpg" alt="April 26th" id="doodle116">
+											<img src="img/thumbnail116.jpg" alt="April 26th" id="doodle116">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail117.jpg" alt="April 27th" id="doodle117">
+											<img src="img/thumbnail117.jpg" alt="April 27th" id="doodle117">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail118.jpg" alt="April 28th" id="doodle118">
+											<img src="img/thumbnail118.jpg" alt="April 28th" id="doodle118">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail119.jpg" alt="April 29th" id="doodle119">
+											<img src="img/thumbnail119.jpg" alt="April 29th" id="doodle119">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail120.jpg" alt="April 30th" id="doodle120">
+											<img src="img/thumbnail120.jpg" alt="April 30th" id="doodle120">
 										</td>
 										<td></td>
 										<td></td>
@@ -642,135 +665,135 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail121.jpg" alt="May 1st" id="doodle121">
+											<img src="img/thumbnail121.jpg" alt="May 1st" id="doodle121">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail122.jpg" alt="May 2nd" id="doodle122">
+											<img src="img/thumbnail122.jpg" alt="May 2nd" id="doodle122">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail123.jpg" alt="May 3rd" id="doodle123">
+											<img src="img/thumbnail123.jpg" alt="May 3rd" id="doodle123">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail124.jpg" alt="May 4th" id="doodle124">
+											<img src="img/thumbnail124.jpg" alt="May 4th" id="doodle124">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail125.jpg" alt="May 5th" id="doodle125">
+											<img src="img/thumbnail125.jpg" alt="May 5th" id="doodle125">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail126.jpg" alt="May 6th" id="doodle126">
+											<img src="img/thumbnail126.jpg" alt="May 6th" id="doodle126">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail127.jpg" alt="May 7th" id="doodle127">
+											<img src="img/thumbnail127.jpg" alt="May 7th" id="doodle127">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail128.jpg" alt="May 8th" id="doodle128">
+											<img src="img/thumbnail128.jpg" alt="May 8th" id="doodle128">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail129.jpg" alt="May 9th" id="doodle129">
+											<img src="img/thumbnail129.jpg" alt="May 9th" id="doodle129">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail130.jpg" alt="May 10th" id="doodle130">
+											<img src="img/thumbnail130.jpg" alt="May 10th" id="doodle130">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail131.jpg" alt="May 11th" id="doodle131">
+											<img src="img/thumbnail131.jpg" alt="May 11th" id="doodle131">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail132.jpg" alt="May 12th" id="doodle132">
+											<img src="img/thumbnail132.jpg" alt="May 12th" id="doodle132">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail133.jpg" alt="May 13th" id="doodle133">
+											<img src="img/thumbnail133.jpg" alt="May 13th" id="doodle133">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail134.jpg" alt="May 14th" id="doodle134">
+											<img src="img/thumbnail134.jpg" alt="May 14th" id="doodle134">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail135.jpg" alt="May 15th" id="doodle135">
+											<img src="img/thumbnail135.jpg" alt="May 15th" id="doodle135">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail136.jpg" alt="May 16th" id="doodle136">
+											<img src="img/thumbnail136.jpg" alt="May 16th" id="doodle136">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail137.jpg" alt="May 17th" id="doodle137">
+											<img src="img/thumbnail137.jpg" alt="May 17th" id="doodle137">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail138.jpg" alt="May 18th" id="doodle138">
+											<img src="img/thumbnail138.jpg" alt="May 18th" id="doodle138">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail139.jpg" alt="May 19th" id="doodle139">
+											<img src="img/thumbnail139.jpg" alt="May 19th" id="doodle139">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail140.jpg" alt="May 20th" id="doodle140">
+											<img src="img/thumbnail140.jpg" alt="May 20th" id="doodle140">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail141.jpg" alt="May 21st" id="doodle141">
+											<img src="img/thumbnail141.jpg" alt="May 21st" id="doodle141">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail142.jpg" alt="May 22nd" id="doodle142">
+											<img src="img/thumbnail142.jpg" alt="May 22nd" id="doodle142">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail143.jpg" alt="May 23rd" id="doodle143">
+											<img src="img/thumbnail143.jpg" alt="May 23rd" id="doodle143">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail144.jpg" alt="May 24th" id="doodle144">
+											<img src="img/thumbnail144.jpg" alt="May 24th" id="doodle144">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail145.jpg" alt="May 25th" id="doodle145">
+											<img src="img/thumbnail145.jpg" alt="May 25th" id="doodle145">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail146.jpg" alt="May 26th" id="doodle146">
+											<img src="img/thumbnail146.jpg" alt="May 26th" id="doodle146">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail147.jpg" alt="May 27th" id="doodle147">
+											<img src="img/thumbnail147.jpg" alt="May 27th" id="doodle147">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail148.jpg" alt="May 28th" id="doodle148">
+											<img src="img/thumbnail148.jpg" alt="May 28th" id="doodle148">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail149.jpg" alt="May 29th" id="doodle149">
+											<img src="img/thumbnail149.jpg" alt="May 29th" id="doodle149">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail150.jpg" alt="May 30th" id="doodle150"
+											<img src="img/thumbnail150.jpg" alt="May 30th" id="doodle150"
 										</td>
 										<td>
 											<p>31</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail151.jpg" alt="May 31st" id="doodle151">
+											<img src="img/thumbnail151.jpg" alt="May 31st" id="doodle151">
 										</td>
 										<td></td>
 									</tr>
@@ -790,133 +813,133 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail152.jpg" alt="June 1st" id="doodle152">
+											<img src="img/thumbnail152.jpg" alt="June 1st" id="doodle152">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail153.jpg" alt="June 2nd" id="doodle153">
+											<img src="img/thumbnail153.jpg" alt="June 2nd" id="doodle153">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail154.jpg" alt="June 3rd" id="doodle154">
+											<img src="img/thumbnail154.jpg" alt="June 3rd" id="doodle154">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail155.jpg" alt="June 4th" id="doodle155">
+											<img src="img/thumbnail155.jpg" alt="June 4th" id="doodle155">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail156.jpg" alt="June 5th" id="doodle156">
+											<img src="img/thumbnail156.jpg" alt="June 5th" id="doodle156">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail157.jpg" alt="June 6th" id="doodle157">
+											<img src="img/thumbnail157.jpg" alt="June 6th" id="doodle157">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail158.jpg" alt="June 7th" id="doodle158">
+											<img src="img/thumbnail158.jpg" alt="June 7th" id="doodle158">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail159.jpg" alt="June 8th" id="doodle159">
+											<img src="img/thumbnail159.jpg" alt="June 8th" id="doodle159">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail160.jpg" alt="June 9th" id="doodle160">
+											<img src="img/thumbnail160.jpg" alt="June 9th" id="doodle160">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail161.jpg" alt="June 10th" id="doodle161">
+											<img src="img/thumbnail161.jpg" alt="June 10th" id="doodle161">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail162.jpg" alt="June 11th" id="doodle162">
+											<img src="img/thumbnail162.jpg" alt="June 11th" id="doodle162">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail163.jpg" alt="June 12th" id="doodle163">
+											<img src="img/thumbnail163.jpg" alt="June 12th" id="doodle163">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail164.jpg" alt="June 13th" id="doodle164">
+											<img src="img/thumbnail164.jpg" alt="June 13th" id="doodle164">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail165.jpg" alt="June 14th" id="doodle165">
+											<img src="img/thumbnail165.jpg" alt="June 14th" id="doodle165">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail166.jpg" alt="June 15th" id="doodle166">
+											<img src="img/thumbnail166.jpg" alt="June 15th" id="doodle166">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail167.jpg" alt="June 16th" id="doodle167">
+											<img src="img/thumbnail167.jpg" alt="June 16th" id="doodle167">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail168.jpg" alt="June 17th" id="doodle168">
+											<img src="img/thumbnail168.jpg" alt="June 17th" id="doodle168">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail169.jpg" alt="June 18th" id="doodle169">
+											<img src="img/thumbnail169.jpg" alt="June 18th" id="doodle169">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail170.jpg" alt="June 19th" id="doodle170">
+											<img src="img/thumbnail170.jpg" alt="June 19th" id="doodle170">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail171.jpg" alt="June 20th" id="doodle171">
+											<img src="img/thumbnail171.jpg" alt="June 20th" id="doodle171">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail172.jpg" alt="June 21st" id="doodle172">
+											<img src="img/thumbnail172.jpg" alt="June 21st" id="doodle172">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail173.jpg" alt="June 22nd" id="doodle173">
+											<img src="img/thumbnail173.jpg" alt="June 22nd" id="doodle173">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail174.jpg" alt="June 23rd" id="doodle174">
+											<img src="img/thumbnail174.jpg" alt="June 23rd" id="doodle174">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail175.jpg" alt="June 24th" id="doodle175">
+											<img src="img/thumbnail175.jpg" alt="June 24th" id="doodle175">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail176.jpg" alt="June 25th" id="doodle176">
+											<img src="img/thumbnail176.jpg" alt="June 25th" id="doodle176">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail177.jpg" alt="June 26th" id="doodle177">
+											<img src="img/thumbnail177.jpg" alt="June 26th" id="doodle177">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail178.jpg" alt="June 27th" id="doodle178">
+											<img src="img/thumbnail178.jpg" alt="June 27th" id="doodle178">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail179.jpg" alt="June 28th" id="doodle179">
+											<img src="img/thumbnail179.jpg" alt="June 28th" id="doodle179">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail180.jpg" alt="June 29th" id="doodle180">
+											<img src="img/thumbnail180.jpg" alt="June 29th" id="doodle180">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail181.jpg" alt="June 30th" id="doodle181">
+											<img src="img/thumbnail181.jpg" alt="June 30th" id="doodle181">
 										</td>
 										<td></td>
 										<td></td>
@@ -936,135 +959,135 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail182.jpg" alt="July 1st" id="doodle182">
+											<img src="img/thumbnail182.jpg" alt="July 1st" id="doodle182">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail183.jpg" alt="July 2nd" id="doodle183">
+											<img src="img/thumbnail183.jpg" alt="July 2nd" id="doodle183">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail184.jpg" alt="July 3rd" id="doodle184">
+											<img src="img/thumbnail184.jpg" alt="July 3rd" id="doodle184">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail185.jpg" alt="July 4th" id="doodle185">
+											<img src="img/thumbnail185.jpg" alt="July 4th" id="doodle185">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail186.jpg" alt="July 5th" id="doodle186">
+											<img src="img/thumbnail186.jpg" alt="July 5th" id="doodle186">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail187.jpg" alt="July 6th" id="doodle187">
+											<img src="img/thumbnail187.jpg" alt="July 6th" id="doodle187">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail188.jpg" alt="July 7th" id="doodle188">
+											<img src="img/thumbnail188.jpg" alt="July 7th" id="doodle188">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail189.jpg" alt="July 8th" id="doodle189">
+											<img src="img/thumbnail189.jpg" alt="July 8th" id="doodle189">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail190.jpg" alt="July 9th" id="doodle190">
+											<img src="img/thumbnail190.jpg" alt="July 9th" id="doodle190">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail191.jpg" alt="July 10th" id="doodle191">
+											<img src="img/thumbnail191.jpg" alt="July 10th" id="doodle191">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail192.jpg" alt="July 11th" id="doodle192">
+											<img src="img/thumbnail192.jpg" alt="July 11th" id="doodle192">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail193.jpg" alt="July 12th" id="doodle193">
+											<img src="img/thumbnail193.jpg" alt="July 12th" id="doodle193">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail194.jpg" alt="July 13th" id="doodle194">
+											<img src="img/thumbnail194.jpg" alt="July 13th" id="doodle194">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail195.jpg" alt="July 14th" id="doodle195">
+											<img src="img/thumbnail195.jpg" alt="July 14th" id="doodle195">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail196.jpg" alt="July 15th" id="doodle196">
+											<img src="img/thumbnail196.jpg" alt="July 15th" id="doodle196">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail197.jpg" alt="July 16th" id="doodle197">
+											<img src="img/thumbnail197.jpg" alt="July 16th" id="doodle197">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail198.jpg" alt="July 17th" id="doodle198">
+											<img src="img/thumbnail198.jpg" alt="July 17th" id="doodle198">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail199.jpg" alt="July 18th" id="doodle199">
+											<img src="img/thumbnail199.jpg" alt="July 18th" id="doodle199">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail200.jpg" alt="July 19th" id="doodle200">
+											<img src="img/thumbnail200.jpg" alt="July 19th" id="doodle200">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail201.jpg" alt="July 20th" id="doodle201">
+											<img src="img/thumbnail201.jpg" alt="July 20th" id="doodle201">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail202.jpg" alt="July 21st" id="doodle202">
+											<img src="img/thumbnail202.jpg" alt="July 21st" id="doodle202">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail203.jpg" alt="July 22nd" id="doodle203">
+											<img src="img/thumbnail203.jpg" alt="July 22nd" id="doodle203">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail204.jpg" alt="July 23rd" id="doodle204">
+											<img src="img/thumbnail204.jpg" alt="July 23rd" id="doodle204">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail205.jpg" alt="July 24th" id="doodle205">
+											<img src="img/thumbnail205.jpg" alt="July 24th" id="doodle205">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail206.jpg" alt="July 25th" id="doodle206">
+											<img src="img/thumbnail206.jpg" alt="July 25th" id="doodle206">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail207.jpg" alt="July 26th" id="doodle207">
+											<img src="img/thumbnail207.jpg" alt="July 26th" id="doodle207">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail208.jpg" alt="July 27th" id="doodle208">
+											<img src="img/thumbnail208.jpg" alt="July 27th" id="doodle208">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail209.jpg" alt="July 28th" id="doodle209">
+											<img src="img/thumbnail209.jpg" alt="July 28th" id="doodle209">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail210.jpg" alt="July 29th" id="doodle210">
+											<img src="img/thumbnail210.jpg" alt="July 29th" id="doodle210">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail211.jpg" alt="July 30th" id="doodle211">
+											<img src="img/thumbnail211.jpg" alt="July 30th" id="doodle211">
 										</td>
 										<td>
 											<p>31</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail212.jpg" alt="July 31st" id="doodle212">
+											<img src="img/thumbnail212.jpg" alt="July 31st" id="doodle212">
 										</td>
 										<td></td>
 										<td></td>
@@ -1084,135 +1107,135 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail213.jpg" alt="August 1st" id="doodle213">
+											<img src="img/thumbnail213.jpg" alt="August 1st" id="doodle213">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail214.jpg" alt="August 2nd" id="doodle214">
+											<img src="img/thumbnail214.jpg" alt="August 2nd" id="doodle214">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail215.jpg" alt="August 3rd" id="doodle215">
+											<img src="img/thumbnail215.jpg" alt="August 3rd" id="doodle215">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail216.jpg" alt="August 4th" id="doodle216">
+											<img src="img/thumbnail216.jpg" alt="August 4th" id="doodle216">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail217.jpg" alt="August 5th" id="doodle217">
+											<img src="img/thumbnail217.jpg" alt="August 5th" id="doodle217">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail218.jpg" alt="August 6th" id="doodle218">
+											<img src="img/thumbnail218.jpg" alt="August 6th" id="doodle218">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail219.jpg" alt="August 7th" id="doodle219">
+											<img src="img/thumbnail219.jpg" alt="August 7th" id="doodle219">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail220.jpg" alt="August 8th" id="doodle220">
+											<img src="img/thumbnail220.jpg" alt="August 8th" id="doodle220">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail221.jpg" alt="August 9th" id="doodle221">
+											<img src="img/thumbnail221.jpg" alt="August 9th" id="doodle221">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail222.jpg" alt="August 10th" id="doodle222">
+											<img src="img/thumbnail222.jpg" alt="August 10th" id="doodle222">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail223.jpg" alt="August 11th" id="doodle223">
+											<img src="img/thumbnail223.jpg" alt="August 11th" id="doodle223">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail224.jpg" alt="August 12th" id="doodle224">
+											<img src="img/thumbnail224.jpg" alt="August 12th" id="doodle224">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail225.jpg" alt="Augsut 13th" id="doodle225">
+											<img src="img/thumbnail225.jpg" alt="Augsut 13th" id="doodle225">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail226.jpg" alt="August 14th" id="doodle226">
+											<img src="img/thumbnail226.jpg" alt="August 14th" id="doodle226">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail227.jpg" alt="August 15th" id="doodle227">
+											<img src="img/thumbnail227.jpg" alt="August 15th" id="doodle227">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail228.jpg" alt="August 16th" id="doodle228">
+											<img src="img/thumbnail228.jpg" alt="August 16th" id="doodle228">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail229.jpg" alt="August 17th" id="doodle229">
+											<img src="img/thumbnail229.jpg" alt="August 17th" id="doodle229">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail230.jpg" alt="August 18th" id="doodle230">
+											<img src="img/thumbnail230.jpg" alt="August 18th" id="doodle230">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail231.jpg" alt="August 19th" id="doodle231">
+											<img src="img/thumbnail231.jpg" alt="August 19th" id="doodle231">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail232.jpg" alt="August 20th" id="doodle232">
+											<img src="img/thumbnail232.jpg" alt="August 20th" id="doodle232">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail233.jpg" alt="August 21st" id="doodle233">
+											<img src="img/thumbnail233.jpg" alt="August 21st" id="doodle233">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail234.jpg" alt="August 22nd" id="doodle234">
+											<img src="img/thumbnail234.jpg" alt="August 22nd" id="doodle234">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail235.jpg" alt="August 23rd" id="doodle235">
+											<img src="img/thumbnail235.jpg" alt="August 23rd" id="doodle235">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail236.jpg" alt="August 24th" id="doodle236">
+											<img src="img/thumbnail236.jpg" alt="August 24th" id="doodle236">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail237.jpg" alt="August 25th" id="doodle237">
+											<img src="img/thumbnail237.jpg" alt="August 25th" id="doodle237">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail238.jpg" alt="August 26th" id="doodle238">
+											<img src="img/thumbnail238.jpg" alt="August 26th" id="doodle238">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail239.jpg" alt="August 27th" id="doodle239">
+											<img src="img/thumbnail239.jpg" alt="August 27th" id="doodle239">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail240.jpg" alt="August 28th" id="doodle240">
+											<img src="img/thumbnail240.jpg" alt="August 28th" id="doodle240">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail241.jpg" alt="August 29th" id="doodle241">
+											<img src="img/thumbnail241.jpg" alt="August 29th" id="doodle241">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail242.jpg" alt="August 30th" id="doodle242">
+											<img src="img/thumbnail242.jpg" alt="August 30th" id="doodle242">
 										</td>
 										<td>
 											<p>31</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail243.jpg" alt="August 31st" id="doodle243">
+											<img src="img/thumbnail243.jpg" alt="August 31st" id="doodle243">
 										</td>
 									</tr>
 								</tbody>
@@ -1225,131 +1248,131 @@
 									<tr>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail244.jpg" alt="September 1st" id="doodle244">
+											<img src="img/thumbnail244.jpg" alt="September 1st" id="doodle244">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail245.jpg" alt="September 2nd" id="doodle245">
+											<img src="img/thumbnail245.jpg" alt="September 2nd" id="doodle245">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail246.jpg" alt="September 3rd" id="doodle246">
+											<img src="img/thumbnail246.jpg" alt="September 3rd" id="doodle246">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail247.jpg" alt="September 4th" id="doodle247">
+											<img src="img/thumbnail247.jpg" alt="September 4th" id="doodle247">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail248.jpg" alt="September 5th" id="doodle248">
+											<img src="img/thumbnail248.jpg" alt="September 5th" id="doodle248">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail249.jpg" alt="September 6th" id="doodle249">
+											<img src="img/thumbnail249.jpg" alt="September 6th" id="doodle249">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail250.jpg" alt="September 7th" id="doodle250">
+											<img src="img/thumbnail250.jpg" alt="September 7th" id="doodle250">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail251.jpg" alt="September 8th" id="doodle251">
+											<img src="img/thumbnail251.jpg" alt="September 8th" id="doodle251">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail252.jpg" alt="September 9th" id="doodle252">
+											<img src="img/thumbnail252.jpg" alt="September 9th" id="doodle252">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail253.jpg" alt="September 10th" id="doodle253">
+											<img src="img/thumbnail253.jpg" alt="September 10th" id="doodle253">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail254.jpg" alt="September 11th" id="doodle254">
+											<img src="img/thumbnail254.jpg" alt="September 11th" id="doodle254">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail255.jpg" alt="September 12th" id="doodle255">
+											<img src="img/thumbnail255.jpg" alt="September 12th" id="doodle255">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail256.jpg" alt="September 13th" id="doodle256">
+											<img src="img/thumbnail256.jpg" alt="September 13th" id="doodle256">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail257.jpg" alt="September 14th" id="doodle257">
+											<img src="img/thumbnail257.jpg" alt="September 14th" id="doodle257">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail258.jpg" alt="September 15th" id="doodle258">
+											<img src="img/thumbnail258.jpg" alt="September 15th" id="doodle258">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail259.jpg" alt="September 16th" id="doodle259">
+											<img src="img/thumbnail259.jpg" alt="September 16th" id="doodle259">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail260.jpg" alt="September 17th" id="doodle260">
+											<img src="img/thumbnail260.jpg" alt="September 17th" id="doodle260">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail261.jpg" alt="September 18th" id="doodle261">
+											<img src="img/thumbnail261.jpg" alt="September 18th" id="doodle261">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail262.jpg" alt="September 19th" id="doodle262">
+											<img src="img/thumbnail262.jpg" alt="September 19th" id="doodle262">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail263.jpg" alt="September 20th" id="doodle263">
+											<img src="img/thumbnail263.jpg" alt="September 20th" id="doodle263">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail264.jpg" alt="September 21st" id="doodle264">
+											<img src="img/thumbnail264.jpg" alt="September 21st" id="doodle264">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail265.jpg" alt="September 22nd" id="doodle265">
+											<img src="img/thumbnail265.jpg" alt="September 22nd" id="doodle265">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail266.jpg" alt="September 23rd" id="doodle266">
+											<img src="img/thumbnail266.jpg" alt="September 23rd" id="doodle266">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail267.jpg" alt="September 24th" id="doodle267">
+											<img src="img/thumbnail267.jpg" alt="September 24th" id="doodle267">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail268.jpg" alt="September 25th" id="doodle268">
+											<img src="img/thumbnail268.jpg" alt="September 25th" id="doodle268">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail269.jpg" alt="September 26th" id="doodle269">
+											<img src="img/thumbnail269.jpg" alt="September 26th" id="doodle269">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail270.jpg" alt="September 27th" id="doodle270">
+											<img src="img/thumbnail270.jpg" alt="September 27th" id="doodle270">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail271.jpg" alt="September 28th" id="doodle271">
+											<img src="img/thumbnail271.jpg" alt="September 28th" id="doodle271">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail272.jpg" alt="September 29th" id="doodle272">
+											<img src="img/thumbnail272.jpg" alt="September 29th" id="doodle272">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail273.jpg" alt="September 30th" id="doodle273">
+											<img src="img/thumbnail273.jpg" alt="September 30th" id="doodle273">
 										</td>
 										<td></td>
 										<td></td>
@@ -1369,135 +1392,135 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail274.jpg" alt="October 1st" id="doodle274">
+											<img src="img/thumbnail274.jpg" alt="October 1st" id="doodle274">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail275.jpg" alt="October 2nd" id="doodle275">
+											<img src="img/thumbnail275.jpg" alt="October 2nd" id="doodle275">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail276.jpg" alt="October 3rd" id="doodle276">
+											<img src="img/thumbnail276.jpg" alt="October 3rd" id="doodle276">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail277.jpg" alt="October 4th" id="doodle277">
+											<img src="img/thumbnail277.jpg" alt="October 4th" id="doodle277">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail278.jpg" alt="October 5th" id="doodle278">
+											<img src="img/thumbnail278.jpg" alt="October 5th" id="doodle278">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail279.jpg" alt="October 6th" id="doodle279">
+											<img src="img/thumbnail279.jpg" alt="October 6th" id="doodle279">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail280.jpg" alt="October 7th" id="doodle280">
+											<img src="img/thumbnail280.jpg" alt="October 7th" id="doodle280">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail281.jpg" alt="October 8th" id="doodle281">
+											<img src="img/thumbnail281.jpg" alt="October 8th" id="doodle281">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail282.jpg" alt="October 9th" id="doodle282">
+											<img src="img/thumbnail282.jpg" alt="October 9th" id="doodle282">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail283.jpg" alt="October 10th" id="doodle283">
+											<img src="img/thumbnail283.jpg" alt="October 10th" id="doodle283">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail284.jpg" alt="October 11th" id="doodle284">
+											<img src="img/thumbnail284.jpg" alt="October 11th" id="doodle284">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail285.jpg" alt="October 12th" id="doodle285">
+											<img src="img/thumbnail285.jpg" alt="October 12th" id="doodle285">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail286.jpg" alt="October 13th" id="doodle286">
+											<img src="img/thumbnail286.jpg" alt="October 13th" id="doodle286">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail287.jpg" alt="October 14th" id="doodle287">
+											<img src="img/thumbnail287.jpg" alt="October 14th" id="doodle287">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail288.jpg" alt="October 15th" id="doodle288">
+											<img src="img/thumbnail288.jpg" alt="October 15th" id="doodle288">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail289.jpg" alt="Ocotber 16th" id="doodle289">
+											<img src="img/thumbnail289.jpg" alt="Ocotber 16th" id="doodle289">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail290.jpg" alt="October 17th" id="doodle290">
+											<img src="img/thumbnail290.jpg" alt="October 17th" id="doodle290">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail291.jpg" alt="October 18th" id="doodle291">
+											<img src="img/thumbnail291.jpg" alt="October 18th" id="doodle291">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail292.jpg" alt="October 19th" id="doodle292">
+											<img src="img/thumbnail292.jpg" alt="October 19th" id="doodle292">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail293.jpg" alt="October 20th" id="doodle293">
+											<img src="img/thumbnail293.jpg" alt="October 20th" id="doodle293">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail294.jpg" alt="October 21st" id="doodle294">
+											<img src="img/thumbnail294.jpg" alt="October 21st" id="doodle294">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail295.jpg" alt="October 22nd" id="doodle295">
+											<img src="img/thumbnail295.jpg" alt="October 22nd" id="doodle295">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail296.jpg" alt="October 23rd" id="doodle296">
+											<img src="img/thumbnail296.jpg" alt="October 23rd" id="doodle296">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail297.jpg" alt="October 24th" id="doodle297">
+											<img src="img/thumbnail297.jpg" alt="October 24th" id="doodle297">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail298.jpg" alt="October 25th" id="doodle298">
+											<img src="img/thumbnail298.jpg" alt="October 25th" id="doodle298">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail299.jpg" alt="October 26th" id="doodle299">
+											<img src="img/thumbnail299.jpg" alt="October 26th" id="doodle299">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail300.jpg" alt="October 27th" id="doodle300">
+											<img src="img/thumbnail300.jpg" alt="October 27th" id="doodle300">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail301.jpg" alt="Ocotber 28th" id="doodle301">
+											<img src="img/thumbnail301.jpg" alt="Ocotber 28th" id="doodle301">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail302.jpg" alt="October 29th" id="doodle302">
+											<img src="img/thumbnail302.jpg" alt="October 29th" id="doodle302">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail303.jpg" alt="October 30th" id="doodle303">
+											<img src="img/thumbnail303.jpg" alt="October 30th" id="doodle303">
 										</td>
 										<td>
 											<p>31</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail304.jpg" alt="October 31st" id="doodle304">
+											<img src="img/thumbnail304.jpg" alt="October 31st" id="doodle304">
 										</td>
 										<td></td>
 										<td></td>
@@ -1517,131 +1540,131 @@
 										<td></td>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail305.jpg" alt="November 1st" id="doodle305">
+											<img src="img/thumbnail305.jpg" alt="November 1st" id="doodle305">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail306.jpg" alt="November 2nd" id="doodle306">
+											<img src="img/thumbnail306.jpg" alt="November 2nd" id="doodle306">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail307.jpg" alt="November 3rd" id="doodle307">
+											<img src="img/thumbnail307.jpg" alt="November 3rd" id="doodle307">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail308.jpg" alt="November 4th" id="doodle308">
+											<img src="img/thumbnail308.jpg" alt="November 4th" id="doodle308">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail309.jpg" alt="November 5th" id="doodle309">
+											<img src="img/thumbnail309.jpg" alt="November 5th" id="doodle309">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail310.jpg" alt="November 6th" id="doodle310">
+											<img src="img/thumbnail310.jpg" alt="November 6th" id="doodle310">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail311.jpg" alt="November 7th" id="doodle311">
+											<img src="img/thumbnail311.jpg" alt="November 7th" id="doodle311">
 										</td>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail312.jpg" alt="November 8th" id="doodle312">
+											<img src="img/thumbnail312.jpg" alt="November 8th" id="doodle312">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail313.jpg" alt="November 9th" id="doodle313">
+											<img src="img/thumbnail313.jpg" alt="November 9th" id="doodle313">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail314.jpg" alt="November 10th" id="doodle314">
+											<img src="img/thumbnail314.jpg" alt="November 10th" id="doodle314">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail315.jpg" alt="November 11th" id="doodle315">
+											<img src="img/thumbnail315.jpg" alt="November 11th" id="doodle315">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail316.jpg" alt="November 12th" id="doodle316">
+											<img src="img/thumbnail316.jpg" alt="November 12th" id="doodle316">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail317.jpg" alt="November 13th" id="doodle317">
+											<img src="img/thumbnail317.jpg" alt="November 13th" id="doodle317">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail318.jpg" alt="November 14th" id="doodle318">
+											<img src="img/thumbnail318.jpg" alt="November 14th" id="doodle318">
 										</td>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail319.jpg" alt="November 15th" id="doodle319">
+											<img src="img/thumbnail319.jpg" alt="November 15th" id="doodle319">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail320.jpg" alt="November 16th" id="doodle320">
+											<img src="img/thumbnail320.jpg" alt="November 16th" id="doodle320">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail321.jpg" alt="November 17th" id="doodle321">
+											<img src="img/thumbnail321.jpg" alt="November 17th" id="doodle321">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail322.jpg" alt="November 18th" id="doodle322">
+											<img src="img/thumbnail322.jpg" alt="November 18th" id="doodle322">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail323.jpg" alt="November 19th" id="doodle323">
+											<img src="img/thumbnail323.jpg" alt="November 19th" id="doodle323">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail324.jpg" alt="November 20th" id="doodle324">
+											<img src="img/thumbnail324.jpg" alt="November 20th" id="doodle324">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail325.jpg" alt="November 21st" id="doodle325">
+											<img src="img/thumbnail325.jpg" alt="November 21st" id="doodle325">
 										</td>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail326.jpg" alt="November 22nd" id="doodle326">
+											<img src="img/thumbnail326.jpg" alt="November 22nd" id="doodle326">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail327.jpg" alt="November 23rd" id="doodle327">
+											<img src="img/thumbnail327.jpg" alt="November 23rd" id="doodle327">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail328.jpg" alt="November 24th" id="doodle328">
+											<img src="img/thumbnail328.jpg" alt="November 24th" id="doodle328">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail329.jpg" alt="November 25th" id="doodle329">
+											<img src="img/thumbnail329.jpg" alt="November 25th" id="doodle329">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail330.jpg" alt="November 26th" id="doodle330">
+											<img src="img/thumbnail330.jpg" alt="November 26th" id="doodle330">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail331.jpg" alt="November 27th" id="doodle331">
+											<img src="img/thumbnail331.jpg" alt="November 27th" id="doodle331">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail332.jpg" alt="November 28th" id="doodle332">
+											<img src="img/thumbnail332.jpg" alt="November 28th" id="doodle332">
 										</td>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail333.jpg" alt="November 29th" id="doodle333">
+											<img src="img/thumbnail333.jpg" alt="November 29th" id="doodle333">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail334.jpg" alt="November 30th" id="doodle334">
+											<img src="img/thumbnail334.jpg" alt="November 30th" id="doodle334">
 										</td>
 									</tr>
 								</tbody>
@@ -1654,135 +1677,135 @@
 									<tr>
 										<td>
 											<p>1</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail335.jpg" alt="December 1st" id="doodle335">
+											<img src="img/thumbnail335.jpg" alt="December 1st" id="doodle335">
 										</td>
 										<td>
 											<p>2</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail336.jpg" alt="December 2nd" id="doodle336">
+											<img src="img/thumbnail336.jpg" alt="December 2nd" id="doodle336">
 										</td>
 										<td>
 											<p>3</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail337.jpg" alt="December 3rd" id="doodle337">
+											<img src="img/thumbnail337.jpg" alt="December 3rd" id="doodle337">
 										</td>
 										<td>
 											<p>4</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail338.jpg" alt="December 4th" id="doodle338">
+											<img src="img/thumbnail338.jpg" alt="December 4th" id="doodle338">
 										</td>
 										<td>
 											<p>5</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail339.jpg" alt="December 5th" id="doodle339">
+											<img src="img/thumbnail339.jpg" alt="December 5th" id="doodle339">
 										</td>
 										<td>
 											<p>6</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail340.jpg" alt="December 6th" id="doodle340">
+											<img src="img/thumbnail340.jpg" alt="December 6th" id="doodle340">
 										</td>
 										<td>
 											<p>7</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail341.jpg" alt="December 7th" id="doodle341">
+											<img src="img/thumbnail341.jpg" alt="December 7th" id="doodle341">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>8</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail342.jpg" alt="December 8th" id="doodle342">
+											<img src="img/thumbnail342.jpg" alt="December 8th" id="doodle342">
 										</td>
 										<td>
 											<p>9</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail343.jpg" alt="December 9th" id="doodle343">
+											<img src="img/thumbnail343.jpg" alt="December 9th" id="doodle343">
 										</td>
 										<td>
 											<p>10</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail344.jpg" alt="December 10th" id="doodle344">
+											<img src="img/thumbnail344.jpg" alt="December 10th" id="doodle344">
 										</td>
 										<td>
 											<p>11</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail345.jpg" alt="December 11th" id="doodle345">
+											<img src="img/thumbnail345.jpg" alt="December 11th" id="doodle345">
 										</td>
 										<td>
 											<p>12</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail346.jpg" alt="December 12th" id="doodle346">
+											<img src="img/thumbnail346.jpg" alt="December 12th" id="doodle346">
 										</td>
 										<td>
 											<p>13</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail347.jpg" alt="December 13th" id="doodle347">
+											<img src="img/thumbnail347.jpg" alt="December 13th" id="doodle347">
 										</td>
 										<td>
 											<p>14</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail348.jpg" alt="December 14th" id="doodle348">
+											<img src="img/thumbnail348.jpg" alt="December 14th" id="doodle348">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>15</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail349.jpg" alt="December 15th" id="doodle349">
+											<img src="img/thumbnail349.jpg" alt="December 15th" id="doodle349">
 										</td>
 										<td>
 											<p>16</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail350.jpg" alt="December 16th" id="doodle350">
+											<img src="img/thumbnail350.jpg" alt="December 16th" id="doodle350">
 										</td>
 										<td>
 											<p>17</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail351.jpg" alt="December 17th" id="doodle351">
+											<img src="img/thumbnail351.jpg" alt="December 17th" id="doodle351">
 										</td>
 										<td>
 											<p>18</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail352.jpg" alt="December 18th" id="doodle352">
+											<img src="img/thumbnail352.jpg" alt="December 18th" id="doodle352">
 										</td>
 										<td>
 											<p>19</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail353.jpg" alt="December 19th" id="doodle353">
+											<img src="img/thumbnail353.jpg" alt="December 19th" id="doodle353">
 										</td>
 										<td>
 											<p>20</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail354.jpg" alt="December 20th" id="doodle354">
+											<img src="img/thumbnail354.jpg" alt="December 20th" id="doodle354">
 										</td>
 										<td>
 											<p>21</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail355.jpg" alt="December 21st" id="doodle355">
+											<img src="img/thumbnail355.jpg" alt="December 21st" id="doodle355">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>22</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail356.jpg" alt="December 22nd" id="doodle356">
+											<img src="img/thumbnail356.jpg" alt="December 22nd" id="doodle356">
 										</td>
 										<td>
 											<p>23</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail357.jpg" alt="December 23rd" id="doodle357">
+											<img src="img/thumbnail357.jpg" alt="December 23rd" id="doodle357">
 										</td>
 										<td>
 											<p>24</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail358.jpg" alt="December 24th" id="doodle358">
+											<img src="img/thumbnail358.jpg" alt="December 24th" id="doodle358">
 										</td>
 										<td>
 											<p>25</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail359.jpg" alt="December 25th" id="doodle359">
+											<img src="img/thumbnail359.jpg" alt="December 25th" id="doodle359">
 										</td>
 										<td>
 											<p>26</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail360.jpg" alt="December 26th" id="doodle360">
+											<img src="img/thumbnail360.jpg" alt="December 26th" id="doodle360">
 										</td>
 										<td>
 											<p>27</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail361.jpg" alt="December 27th" id="doodle361">
+											<img src="img/thumbnail361.jpg" alt="December 27th" id="doodle361">
 										</td>
 										<td>
 											<p>28</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail362.jpg" alt="December 28th" id="doodle362">
+											<img src="img/thumbnail362.jpg" alt="December 28th" id="doodle362">
 										</td>
 									</tr>
 									<tr>
 										<td>
 											<p>29</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail363.jpg" alt="December 29th" id="doodle363">
+											<img src="img/thumbnail363.jpg" alt="December 29th" id="doodle363">
 										</td>
 										<td>
 											<p>30</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail364.jpg" alt="December 30th" id="doodle364">
+											<img src="img/thumbnail364.jpg" alt="December 30th" id="doodle364">
 										</td>
 										<td>
 											<p>31</p>
-											<img src="https://nelnorris.files.wordpress.com/2016/01/thumbnail365.jpg" alt="December 31st" id="doodle365">
+											<img src="img/thumbnail365.jpg" alt="December 31st" id="doodle365">
 										</td>
 										<td></td>
 										<td></td>

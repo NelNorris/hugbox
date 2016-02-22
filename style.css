@@ -25,24 +25,51 @@ h1, h2, h3, h4, h5, h6 {
 .panel {
 	background-color: #edf4fc;
 	border: 1px solid #fffffc;
-	height: 600px;
+	height: 320px;
 	width: 600px;
 	margin-bottom: 20px;
 }
 
 .display {
 	padding: 10px;
-	height: 520px;
-	width: 520px;
+	height: 320px;
+	width: 600px;
+}
+
+#prev-btn {
+	height: 50px;
+	width: 50px;
+	position: relative;
+	float: left;
+	top: 120px;
+	cursor: pointer;
+}
+
+#next-btn {
+	height: 50px;
+	width: 50px;
+	position: relative;
+	float: right;
+	top: 120px;
+	cursor: pointer;
+}
+
+.glyphicon-chevron-right {
+	height: 50px;
+	width: 50px;
 }
 
 img#picture {
 	margin: 0 auto;
-	vertical-align: center;
+	vertical-align: middle;
 }
 
 .calendar {
 
+}
+
+ul.pagination li {
+	cursor: pointer;
 }
 
 table.calendar {
