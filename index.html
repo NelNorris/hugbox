@@ -17,12 +17,20 @@
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
 					});
 					$("#prev-btn").click(function(){
-						n = n - 1;
+						n++;
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						if (n == 0) {
+							n = 365;
+						}
+						n = 1;
 					});
 					$("#next-btn").click(function(){
-						n = n + 1;
+						n--;
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						if (n == 366) {
+							n = 1;
+						}
+						n = 1;
 					})
 				}(i));
 			}
