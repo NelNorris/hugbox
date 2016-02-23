@@ -11,30 +11,20 @@
 	<link rel="shortcut icon" href="img/icon.png">	
 	<script>
 		$(document).ready(function(){
-			for (var i = 0; i <= 365; i++){
+			for (var i = 0; i < 365; i++){
 				(function (n) {
 					$("#doodle" + n).click(function(){
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-					}(i));	
-					$("#next-btn").click(function(){
-						n++;
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-						n = n;
-						if (n == 366) {
-							n = 1;
-							$("#picture").attr("src", "img/doodle" + n + ".jpg");
-						}
-					}(i));
+						$("#picture").attr("src", "images/doodle" + n + ".jpg");
+					});
 					$("#prev-btn").click(function(){
-						n--;
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-						n = n;
-						if (n == 0) {
-							n = 365;
-							$("#picture").attr("src", "img/doodle" + n + ".jpg");
-						}
-					}(i));
-				});
+						n = n - 1;
+						$("#picture").attr("src", "images/doodle" + n + ".jpg");
+					});
+					$("#next-btn").click(function(){
+						n = n + 1;
+						$("#picture").attr("src", "images/doodle" + n + ".jpg");
+					})
+				}(i));
 			}
 		});
 	</script>
