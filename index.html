@@ -17,14 +17,14 @@
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
 					});
 					$("#prev-btn").click(function(){
-						n++;
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-						n = 0;
-					});
-					$("#next-btn").click(function(){
 						n--;
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-						n = 0;
+						n = 1;
+					});
+					$("#next-btn").click(function(){
+						n++;
+						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						n = 1;
 					})
 				}(i));
 			}
