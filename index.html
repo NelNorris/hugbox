@@ -15,25 +15,26 @@
 				(function (n) {
 					$("#doodle" + n).click(function(){
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-						$("#next-btn").click(function(){
-							n++;
+					}(i));	
+					$("#next-btn").click(function(){
+						n++;
+						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						n = n;
+						if (n == 366) {
+							n = 1;
 							$("#picture").attr("src", "img/doodle" + n + ".jpg");
-							n = n;
-							if (n == 366) {
-								n = 1;
-								$("#picture").attr("src", "img/doodle" + n + ".jpg");
-							}
-						});
-						$("#prev-btn").click(function(){
-							n--;
+						}
+					}(i));
+					$("#prev-btn").click(function(){
+						n--;
+						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						n = n;
+						if (n == 0) {
+							n = 365;
 							$("#picture").attr("src", "img/doodle" + n + ".jpg");
-							n = n;
-							if (n == 0) {
-								n = 365;
-								$("#picture").attr("src", "img/doodle" + n + ".jpg");
-							}
-						});
-				}(i));
+						}
+					}(i));
+				});
 			}
 		});
 	</script>
@@ -52,7 +53,7 @@
 				
 				<div class="panel display" style="margin: 0 auto 20px;">
 					<div id="prev-btn" class="glyphicon glyphicon-chevron-left"></div>
-					<img id="picture" alt="Please select a date" src="img/doodle1.jpg" style="max-width: 300px; max-height: 300px;">
+					<img id="picture" alt="Please select a date" src="#" style="max-width: 300px; max-height: 300px;">
 					<div id="next-btn" class="glyphicon glyphicon-chevron-right"></div>
 				</div>
 
