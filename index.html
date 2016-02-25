@@ -15,22 +15,21 @@
 				(function (n) {
 					$("#doodle" + n).click(function(){
 						$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						$("#next-btn").click(function(){
+							n++;
+							if (n == 366) {
+								n = 1;
+							}
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						});
+						$("#prev-btn").click(function(){
+							n--;
+							if (n == 0) {
+								n = 365;
+							}
+							$("#picture").attr("src", "img/doodle" + n + ".jpg");
+						});
 					});
-					$("#prev-btn").click(function(){
-						n--;
-						if (n == 0) {
-							n = 365;
-						}
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-
-					});
-					$("#next-btn").click(function(){
-						n++;
-						if (n == 366) {
-							n = 1;
-						}
-						$("#picture").attr("src", "img/doodle" + n + ".jpg");
-					})
 				}(i));
 			}
 		});
