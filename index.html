@@ -22,7 +22,7 @@
 	</script>-->
 	<script>
 		function doDoodle(doodleNumber) {
-			$("#picture").attr("src", "images/doodle" + doodleNumber + ".jpg");
+			$("#picture").attr("src", "img/doodle" + doodleNumber + ".jpg");
 		}
 		function doNext() {
 			var str = document.getElementById("picture").getAttribute("src");
@@ -32,7 +32,7 @@
 			if (n == 366) {
 				n = 1;
 			}
-			$("#picture").attr("src","images/doodle" + n + ".jpg");
+			$("#picture").attr("src","img/doodle" + n + ".jpg");
 		}
 		function doPrev() {
 			var str = document.getElementById("picture").getAttribute("src");
@@ -42,7 +42,7 @@
 			if (n == 0) {
 				n = 365;
 			}
-			$("#picture").attr("src","images/doodle" + n + ".jpg");
+			$("#picture").attr("src","img/doodle" + n + ".jpg");
 		}
 	</script>
 
@@ -94,7 +94,7 @@
 		<div class="container">
 				<div id="prev-btn" onClick="doPrev()" style="background-color: #ffe; height: 80px; width: 80px; position: absolute; left: 50px; top: 400px;"></div>
 				<div class="panel display" style="margin: 0 auto 20px;">
-					<img id="picture" alt="Please select a date" src="images/doodle1.jpg">
+					<img id="picture" alt="Please select a date" src="img/doodle1.jpg">
 				</div>
 				<div id="next-btn" onClick="doNext()" style="background-color: #ffe; height: 80px; width: 80px; position: absolute; left: 650px; top: 400px;"></div>
 				<!-- image display -->
