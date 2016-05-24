@@ -29,6 +29,9 @@
 			var n = str.match(/\d+/g);
 			n = parseInt(n);
 			n++;
+			if (n == 366) {
+				n = 1;
+			}
 			$("#picture").attr("src","images/doodle" + n + ".jpg");
 		}
 		function doPrev() {
@@ -36,6 +39,9 @@
 			var n = str.match(/\d+/g);
 			n = parseInt(n);
 			n--;
+			if (n == 0) {
+				n = 365;
+			}
 			$("#picture").attr("src","images/doodle" + n + ".jpg");
 		}
 	</script>
