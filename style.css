@@ -19,6 +19,10 @@ img#picture {}
 .arrow {}
 div#prev {}
 div#next {}
+table.calendar tr {
+	margin-bottom: 1.2em;
+	border-border: 1px solid #666;
+}
 .calendar-display {}
 .calendar-scroll {}
 .month {}
