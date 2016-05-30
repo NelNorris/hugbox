@@ -66,18 +66,15 @@ table.calendar {
 	color: #a1a1a1;
 	font-weight: bold;
 }
-table.calendar tr {
-	margin-bottom: 4px;
-}
 table.calendar td {
 	padding: 0.5em 0 1.2em;
 	margin: 2em 0 2em;
 	border-bottom: 1px solid #e7e7e7;
-	border-top: 2px solid transparent;
 	cursor: pointer;
+	opacity: 0.25;
 }
 .selected {
-	border-top: 2px solid #64b4a0 !important;
+	opacity: 1 !important;
 	color: #333;
 }
 .calendar-display {
