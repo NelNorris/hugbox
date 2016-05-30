@@ -1,41 +1,141 @@
 body {
-	background-color: #ebf0fa;
+	background-color: #e5eeff;
 	text-align: center;
 	color: #333;
 }
 
 p {
-	font-family: AmericanTypewriter;
+	font-family: Lato;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: AmericanTypewriter;
+	font-family: Karla;
 }
-.row {}
-.panel {}
-.picture-container {}
-img#picture {}
-.arrow-container {}
-.arrow {}
-div#prev {}
-div#next {}
-table.calendar tr {
-	margin-bottom: 1.2em;
-	border-border: 1px solid #666;
+.row {
+	max-width: 600px;
+	height: auto;
+	margin: 1em auto 1em;
 }
-.calendar-display {}
-.calendar-scroll {}
-.month {}
-#jan {}
-#feb {}
-#mar {}
-#apr {}
-#may {}
-#jun {}
-#jul {}
-#aug {}
-#sep {}
-#oct {}
-#nov {}
-#dec {}
-.calendar-list li {}
+.panel {
+	padding: 1em;
+}
+.picture-container {
+	height: 500px;
+}
+img#picture {
+	width: auto;
+	height: auto;
+	max-width: 400px;
+	max-height: 400px;
+	margin: 1.8em auto 1.8em;
+}
+.arrow-container {
+	position: relative;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	color: #00994d;
+}
+.arrow {
+	cursor: pointer;
+}
+div#prev {
+	float: left;
+}
+div#next {
+	text-align: right;
+}
+table.calendar {
+	margin: 0 auto;
+	font-size: 0.6em;
+	color: #a1a1a1;
+	font-weight: bold;
+}
+table.calendar td {
+	padding: 0.5em 0 1.2em;
+	margin: 2em 0 2em;
+	border-bottom: 1px solid #e7e7e7;
+}
+.calendar-display {
+	background-color: #ecf0f9;
+	position: absolute;
+	margin: 0 auto;
+	width: 600px;
+	height: 700px;
+	padding: 1em;
+	overflow-x: hidden;
+}
+@media screen and (min-height: 700px) {
+    .calendar-display {
+        height: 76px;
+    }
+}
+.tall {
+	height: 700px;
+}
+.calendar-scroll {
+	position: relative;
+	width: 7200px;
+	height: 600px;
+	left: 0px;
+	top: 0px;
+}
+.month {
+	position: absolute;
+	top: 0px;
+	width: 600px;
+	height: 800px;
+}
+#jan {
+	left: 0px;
+}
+#feb {
+	left: 600px;
+}
+#mar {
+	left: 1200px;
+}
+#apr {
+	left: 1800px;
+}
+#may {
+	left: 2400px;
+}
+#jun {
+	left: 3000px;
+}
+#jul {
+	left: 3600px;
+}
+#aug {
+	left: 4200px;
+}
+#sep {
+	left: 4800px;
+}
+#oct {
+	left: 5400px;
+}
+#nov {
+	left: 6000px;
+}
+#dec {
+	left: 6600px;
+}
+ul.calendar-list {
+	position: relative;
+	list-style: none;
+	padding: 1em 0 1em;
+}
+.calendar-list li {
+	display: inline;
+	margin-right: 0.8em;
+	font-size: 0.7em;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #a5a5a5;
+	cursor: pointer;
+}
+.active {
+	color: #666666 !important;
+}

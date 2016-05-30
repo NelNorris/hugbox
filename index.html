@@ -7,114 +7,25 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="doodle.js"></script>
 	<link rel="stylesheet" href="style.css">	
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Karla:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="img/icon.png">
-
-	<script>
-		function doDoodle(doodleNumber) {
-			$("#picture").attr("src", "img/doodle" + doodleNumber + ".jpg");
-		}
-		function doNext() {
-			var str = document.getElementById("picture").getAttribute("src");
-			var n = str.match(/\d+/g);
-			n = parseInt(n);
-			n++;
-			if (n == 366) {
-				n = 1;
-			}
-			$("#picture").attr("src","img/doodle" + n + ".jpg");
-		}
-		function doPrev() {
-			var str = document.getElementById("picture").getAttribute("src");
-			var n = str.match(/\d+/g);
-			n = parseInt(n);
-			n--;
-			if (n == 0) {
-				n = 365;
-			}
-			$("#picture").attr("src","img/doodle" + n + ".jpg");
-		}
-		var c = 1;
-		function calendar() {
-			if (c==0) {
-				c=1;
-			}
-			if (c==1) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-jan").addClass("active");
-			}
-			if (c==2) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-feb").addClass("active");
-			}
-			if (c==3) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-mar").addClass("active");
-			}
-			if (c==4) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-apr").addClass("active");
-			}
-			if (c==5) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-may").addClass("active");
-			}
-			if (c==6) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-jun").addClass("active");
-			}
-			if (c==7) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-jul").addClass("active");
-			}
-			if (c==8) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-aug").addClass("active");
-			}
-			if (c==9) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-sep").addClass("active");
-			}
-			if (c==10) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-oct").addClass("active");
-			}
-			if (c==11) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-nov").addClass("active");
-			}
-			if (c==12) {
-				$("#calendar-scroll").css({"left":"0px"});
-				$("#calendar-dec").addClass("active");
-			}
-			if (c==13) {
-				c = 12;
-			}
-		}
-		function calendarNav(monthId) {
-			c = monthId;
-			calendar();
-		}
-		function calendarPrev() {
-			c--;
-			calendar();
-		}
-		function calendarNext() {
-			c++;
-			calendar();
-		}
-	</script>
 </head>
 <body>
 	<div class="container-fluid">
 		<div class="row">
+			<h1>365 Doodle 2014</h1>
+			<h6>a doodle a day for a year</h6>
 			<div class="panel">
 				<div class="picture-container">
-					<img id="picture" alt="Please select a date" src="img/doodle1.jpg">
+					<img id="picture" alt="Please select a date" src="img/doodle1.jpg" onClick="doNext()">
 				</div>
+				<p style="text-align: center;">by Nellie Norris</p>
 				<div class="arrow-container">
-					<div id="prev" onClick="doPrev()"></div>
-					<div id="next" onClick="doNext()"></div>
+					<div id="prev" class="arrow" onClick="doPrev()"><strong><</strong></div>
+					<div id="next" class="arrow" onClick="doNext()"><strong>></strong></div>
 				</div>
 			</div>
 		</div>
@@ -1859,26 +1770,30 @@
 						</table>
 					</div>
 				</div>
-			</div>
-			<div class="calendar-navigation">
-				<ul class="calendar-list">
-					<li class="calendar-button" id="calendar-prev" onclick="calendarPrev()"></li>
-					<li class="calendar-button" id="calendar-jan" onclick="calendarNav(1)"></li>
-					<li class="calendar-button" id="calendar-feb" onclick="calendarNav(2)"></li>
-					<li class="calendar-button" id="calendar-mar" onclick="calendarNav(3)"></li>
-					<li class="calendar-button" id="calendar-apr" onclick="calendarNav(4)"></li>
-					<li class="calendar-button" id="calendar-may" onclick="calendarNav(5)"></li>
-					<li class="calendar-button" id="calendar-jun" onclick="calendarNav(6)"></li>
-					<li class="calendar-button" id="calendar-jul" onclick="calendarNav(7)"></li>
-					<li class="calendar-button" id="calendar-aug" onclick="calendarNav(8)"></li>
-					<li class="calendar-button" id="calendar-sep" onclick="calendarNav(9)"></li>
-					<li class="calendar-button" id="calendar-oct" onclick="calendarNav(10)"></li>
-					<li class="calendar-button" id="calendar-nov" onclick="calendarNav(11)"></li>
-					<li class="calendar-button" id="calendar-dec" onclick="calendarNav(12)"></li>
-					<li class="calendar-button" id="calendar-next" onclick="calendarNext()"></li>
-				</ul>
+				
+				<div class="calendar-navigation">
+					<ul class="calendar-list">
+						<li class="calendar-button" id="calendar-prev" onclick="calendarPrev()"><</li>
+						<li class="calendar-button active" id="calendar-jan" onclick="calendarNav(1)">Jan</li>
+						<li class="calendar-button" id="calendar-feb" onclick="calendarNav(2)">Feb</li>
+						<li class="calendar-button" id="calendar-mar" onclick="calendarNav(3)">Mar</li>
+						<li class="calendar-button" id="calendar-apr" onclick="calendarNav(4)">Apr</li>
+						<li class="calendar-button" id="calendar-may" onclick="calendarNav(5)">May</li>
+						<li class="calendar-button" id="calendar-jun" onclick="calendarNav(6)">Jun</li>
+						<li class="calendar-button" id="calendar-jul" onclick="calendarNav(7)">Jul</li>
+						<li class="calendar-button" id="calendar-aug" onclick="calendarNav(8)">Aug</li>
+						<li class="calendar-button" id="calendar-sep" onclick="calendarNav(9)">Sep</li>
+						<li class="calendar-button" id="calendar-oct" onclick="calendarNav(10)">Oct</li>
+						<li class="calendar-button" id="calendar-nov" onclick="calendarNav(11)">Nov</li>
+						<li class="calendar-button" id="calendar-dec" onclick="calendarNav(12)">Dec</li>
+						<li class="calendar-button" id="calendar-next" onclick="calendarNext()">></li>
+					</ul>
+				</div>
 			</div>
 		</div>
+	</div>
+	<div class="row">
+		<p>I am a flower in a dustbin</p>
 	</div>
 </body>
 </html>
