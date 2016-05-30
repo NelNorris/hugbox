@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	$("h3").click(function(){
 		$(".calendar-display").toggleClass("tall");
+		$(".footer").toggleClass("long");
 	});
 })
 function doDoodle(doodleNumber) {
@@ -144,7 +145,6 @@ function doPrev() {
 }
 var c = 1;
 function calendar() {
-	console.log(c);
 	if (c==0) {
 		c=1;
 	}
@@ -216,14 +216,14 @@ function calendarNav(monthId) {
 function calendarPrev() {
 	c--;
 	if (c==0) {
-		c = 1;
+		c = 12;
 	}
 	calendar();
 }
 function calendarNext() {
 	c++;
 	if (c==13) {
-		c = 12;
+		c = 1;
 	}
 	calendar();
 }

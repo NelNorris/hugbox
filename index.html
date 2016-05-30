@@ -20,7 +20,7 @@
 			<h6>a doodle a day for a year</h6>
 			<div class="panel">
 				<div class="picture-container">
-					<img id="picture" alt="Please select a date" src="img/doodle1.jpg" onClick="doNext()">
+					<p style="text-align: center;"><img id="picture" alt="Please select a date" src="img/doodle1.jpg" align="center" onClick="doNext()"></p>
 				</div>
 				<p style="text-align: center;">by Nellie Norris</p>
 				<div class="arrow-container">
@@ -29,8 +29,29 @@
 				</div>
 			</div>
 		</div>
+	</div>
+	<div class="container-fluid">
 		<div class="row">
 			<div class="calendar-display">
+				
+				<div class="calendar-navigation">
+					<ul class="calendar-list">
+						<li class="calendar-button" id="calendar-prev" onclick="calendarPrev()"><</li>
+						<li class="calendar-button active" id="calendar-jan" onclick="calendarNav(1)">Jan</li>
+						<li class="calendar-button" id="calendar-feb" onclick="calendarNav(2)">Feb</li>
+						<li class="calendar-button" id="calendar-mar" onclick="calendarNav(3)">Mar</li>
+						<li class="calendar-button" id="calendar-apr" onclick="calendarNav(4)">Apr</li>
+						<li class="calendar-button" id="calendar-may" onclick="calendarNav(5)">May</li>
+						<li class="calendar-button" id="calendar-jun" onclick="calendarNav(6)">Jun</li>
+						<li class="calendar-button" id="calendar-jul" onclick="calendarNav(7)">Jul</li>
+						<li class="calendar-button" id="calendar-aug" onclick="calendarNav(8)">Aug</li>
+						<li class="calendar-button" id="calendar-sep" onclick="calendarNav(9)">Sep</li>
+						<li class="calendar-button" id="calendar-oct" onclick="calendarNav(10)">Oct</li>
+						<li class="calendar-button" id="calendar-nov" onclick="calendarNav(11)">Nov</li>
+						<li class="calendar-button" id="calendar-dec" onclick="calendarNav(12)">Dec</li>
+						<li class="calendar-button" id="calendar-next" onclick="calendarNext()">></li>
+					</ul>
+				</div>
 				<div class="calendar-scroll">
 					<div class="month" id="jan">
 						<h3>January</h3>
@@ -1770,30 +1791,11 @@
 						</table>
 					</div>
 				</div>
-				
-				<div class="calendar-navigation">
-					<ul class="calendar-list">
-						<li class="calendar-button" id="calendar-prev" onclick="calendarPrev()"><</li>
-						<li class="calendar-button active" id="calendar-jan" onclick="calendarNav(1)">Jan</li>
-						<li class="calendar-button" id="calendar-feb" onclick="calendarNav(2)">Feb</li>
-						<li class="calendar-button" id="calendar-mar" onclick="calendarNav(3)">Mar</li>
-						<li class="calendar-button" id="calendar-apr" onclick="calendarNav(4)">Apr</li>
-						<li class="calendar-button" id="calendar-may" onclick="calendarNav(5)">May</li>
-						<li class="calendar-button" id="calendar-jun" onclick="calendarNav(6)">Jun</li>
-						<li class="calendar-button" id="calendar-jul" onclick="calendarNav(7)">Jul</li>
-						<li class="calendar-button" id="calendar-aug" onclick="calendarNav(8)">Aug</li>
-						<li class="calendar-button" id="calendar-sep" onclick="calendarNav(9)">Sep</li>
-						<li class="calendar-button" id="calendar-oct" onclick="calendarNav(10)">Oct</li>
-						<li class="calendar-button" id="calendar-nov" onclick="calendarNav(11)">Nov</li>
-						<li class="calendar-button" id="calendar-dec" onclick="calendarNav(12)">Dec</li>
-						<li class="calendar-button" id="calendar-next" onclick="calendarNext()">></li>
-					</ul>
-				</div>
 			</div>
 		</div>
 	</div>
-	<div class="row">
-		<p>I am a flower in a dustbin</p>
-	</div>
+		<div class="footer">
+			<p><a href="http://nelnorris.github.io">Home</a></p>
+		</div>
 </body>
 </html>
