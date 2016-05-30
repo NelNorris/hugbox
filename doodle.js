@@ -5,7 +5,9 @@ $(document).ready(function(){
 	});
 })
 function doDoodle(doodleNumber) {
+	$(".doodleThumbnail").removeClass("selected");
 	$("#picture").attr("src", "img/doodle" + doodleNumber + ".jpg");
+	$("#doodle" + doodleNumber).addClass("selected");
 }
 function doNext() {
 	var str = document.getElementById("picture").getAttribute("src");
@@ -73,7 +75,9 @@ function doNext() {
 		$(".calendar-scroll").animate({"left":"-6600px"});
 		$("#calendar-dec").addClass("active");
 	}
+	$(".doodleThumbnail").removeClass("selected");
 	$("#picture").attr("src","img/doodle" + n + ".jpg");
+	$("#doodle" + n).addClass("selected");
 }
 function doPrev() {
 	var str = document.getElementById("picture").getAttribute("src");
@@ -141,7 +145,9 @@ function doPrev() {
 		$(".calendar-scroll").animate({"left":"-6000px"});
 		$("#calendar-nov").addClass("active");
 	}
+	$(".doodleThumbnail").removeClass("selected");
 	$("#picture").attr("src","img/doodle" + n + ".jpg");
+	$("#doodle" + n).addClass("selected");
 }
 var c = 1;
 function calendar() {

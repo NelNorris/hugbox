@@ -21,6 +21,9 @@ h3 {
 	margin: 1em auto 1em;
 	border-bottom: 1px solid #e7e7e7;
 }
+.footer .row {
+	border-bottom: 1px solid #ecf0f9;
+}
 .panel {
 	padding: 1em;
 }
@@ -49,14 +52,13 @@ img#picture {
 	width: 100%;
 	color: #00994d;
 }
-.arrow {
-	cursor: pointer;
-}
 div#prev {
 	float: left;
+	cursor: pointer;
 }
 div#next {
 	text-align: right;
+	cursor: pointer;
 }
 table.calendar {
 	margin: 0 auto;
@@ -64,10 +66,19 @@ table.calendar {
 	color: #a1a1a1;
 	font-weight: bold;
 }
+table.calendar tr {
+	margin-bottom: 4px;
+}
 table.calendar td {
 	padding: 0.5em 0 1.2em;
 	margin: 2em 0 2em;
 	border-bottom: 1px solid #e7e7e7;
+	border-top: 2px solid transparent;
+	cursor: pointer;
+}
+.selected {
+	border-top: 2px solid #64b4a0 !important;
+	color: #333;
 }
 .calendar-display {
 	background-color: #ecf0f9;
@@ -159,13 +170,19 @@ ul.calendar-list {
 	border-top: 1px solid #e7e7e7;
 	background-color: #ffffe6;
 	padding: 3em 0em 2em 0em;
-	text-align: center;
-	font-size: 0.75em;
+	text-align: right;
 }
 .long {
 	top: 700px !important;
 }
-.footer a {
-	color: #696969;
+.footer h5 a {
+	color: #999999;
 	text-decoration: none;
+	font-size: 0.75em;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+h5 a:hover {
+	color: #696969;
+	text-decoration: underline;
 }
