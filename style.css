@@ -86,7 +86,7 @@ table.calendar td {
 	overflow: hidden;
 	margin-bottom: 5em;
 }
-@media screen and (max-height: 400px) {
+@media screen and (min-height: 400px) {
     .calendar-display {
         height: 120px;
     }
