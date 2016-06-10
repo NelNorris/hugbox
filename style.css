@@ -3,6 +3,9 @@ body {
 	text-align: center;
 	color: #333;
 }
+.container-fluid {
+	padding: 0px;
+}
 
 p {
 	font-family: Lato;
@@ -25,7 +28,7 @@ h3 {
 	border-bottom: 1px solid #ecf0f9;
 }
 .panel {
-	padding: 1em;
+	padding: 3em;
 }
 .picture-container {
 	position: relative;
@@ -46,17 +49,22 @@ img#picture {
 	max-height: 400px;
 }
 .arrow-container {
-	position: relative;
-	left: 0px;
-	top: -28px;
 	width: 100%;
 	color: #00994d;
+	margin: 10px auto 10px;
+}
+.arrow {
+	width: 50%;
 }
 div#prev {
+	display: inline;
 	float: left;
+	text-align: left;
 	cursor: pointer;
 }
 div#next {
+	display: inline;
+	float: right;
 	text-align: right;
 	cursor: pointer;
 }
@@ -79,7 +87,6 @@ table.calendar td {
 }
 .calendar-display {
 	background-color: #ecf0f9;
-	position: absolute;
 	margin: 0 auto;
 	width: 600px;
 	height: 700px;
@@ -152,9 +159,12 @@ ul.calendar-list {
 .active {
 	color: #666666 !important;
 }
+.container-footer {
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+}
 .footer {
-	position: relative;
-	top: 100px;
 	margin-top: 3em;
 	border-top: 1px solid #e7e7e7;
 	background-color: #ffffe6;
