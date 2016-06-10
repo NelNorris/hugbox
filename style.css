@@ -86,14 +86,6 @@ table.calendar td {
 	overflow: hidden;
 	margin-bottom: 5em;
 }
-@media screen and (min-height: 400px) {
-    .calendar-display {
-        height: 120px;
-    }
-}
-.tall {
-	height: 700px;
-}
 .calendar-scroll {
 	position: relative;
 	width: 7200px;
