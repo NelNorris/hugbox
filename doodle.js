@@ -9,6 +9,7 @@ function doDoodle(doodleNumber) {
 	$("#picture").attr("src", "img/doodle" + doodleNumber + ".jpg");
 	$("#doodle" + doodleNumber).addClass("selected");
 }
+var c = 1;
 function doNext() {
 	var str = document.getElementById("picture").getAttribute("src");
 	var n = str.match(/\d+/g);
@@ -18,62 +19,74 @@ function doNext() {
 		n = 1;
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"0px"});
-		$("#calendar-jan").addClass("active");
+		c = 1;
+		calendar();
 	}
 	if (n == 32) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-600px"});
-		$("#calendar-feb").addClass("active");
+		c = 2;
+		calendar();
 	}
 	if (n == 60) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-1200px"});
-		$("#calendar-mar").addClass("active");
+		c = 3;
+		calendar();
 	}
 	if (n == 91) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-1800px"});
-		$("#calendar-apr").addClass("active");
+		c = 4;
+		calendar();
 	}
 	if (n == 121) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-2400px"});
-		$("#calendar-may").addClass("active");
+		c = 5;
+		calendar();
 	}
 	if (n == 152) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-3000px"});
-		$("#calendar-jun").addClass("active");
+		c = 6;
+		calendar();
 	}
 	if (n == 182) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-3600px"});
-		$("#calendar-jul").addClass("active");
+		c = 7;
+		calendar();
 	}
 	if (n == 213) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-4200px"});
-		$("#calendar-aug").addClass("active");
+		c = 8;
+		calendar();
 	}
 	if (n == 244) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-4800px"});
-		$("#calendar-sep").addClass("active");
+		c = 9;
+		calendar();
 	}
 	if (n == 274) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-5400px"});
-		$("#calendar-oct").addClass("active");
+		c = 10;
+		calendar();
 	}
 	if (n == 305) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-6000px"});
-		$("#calendar-nov").addClass("active");
+		c = 11;
+		calendar();
 	}
 	if (n == 335) {
 		$(".calendar-button").removeClass("active");
 		$(".calendar-scroll").animate({"left":"-6600px"});
-		$("#calendar-dec").addClass("active");
+		c = 12;
+		calendar();
 	}
 	$(".doodleThumbnail").removeClass("selected");
 	$("#picture").attr("src","img/doodle" + n + ".jpg");
@@ -149,7 +162,6 @@ function doPrev() {
 	$("#picture").attr("src","img/doodle" + n + ".jpg");
 	$("#doodle" + n).addClass("selected");
 }
-var c = 1;
 function calendar() {
 	if (c==0) {
 		c=1;
